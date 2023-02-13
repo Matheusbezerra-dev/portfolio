@@ -1,23 +1,22 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
+import {
+  ContainerHeader,
+  Nav,
+  Div,
+} from './HeaderStyle';
 
 const Header = (): JSX.Element => {
   return (
-    <header>
-      <div>
-        <Link to='/home'>
-          <img
-            src=''
-            alt=''
-          />
+    <ContainerHeader>
+      <Div>
+        <Link to='/'>
+          Bezerra.
         </Link>
-      </div>
-      <nav>
-        <Link to='/about'>
-          Sobre min
-        </Link>
-        <Link to='/contact'>
-          Contate-me
+      </Div>
+      <Nav>
+        <Link to='/'>
+          Home
         </Link>
         <Link to='/my-skills'>
           Minha Habilidade
@@ -25,8 +24,14 @@ const Header = (): JSX.Element => {
         <Link to='/projects'>
           Projetos
         </Link>
-      </nav>
-    </header>
+        <Link to='/contact'>
+          Contate-me
+        </Link>
+        <Link to='/about'>
+          Sobre min
+        </Link>
+      </Nav>
+    </ContainerHeader>
   )
 }
 
