@@ -18,6 +18,9 @@ const Header = (): JSX.Element => {
         <Link to='/'>
           Home
         </Link>
+        <Link to='/about'>
+          Sobre min
+        </Link>
         <Link to='/my-skills'>
           Minha Habilidade
         </Link>
@@ -26,10 +29,7 @@ const Header = (): JSX.Element => {
         </Link>
         <Link to='/contact'>
           Contate-me
-        </Link>
-        <Link to='/about'>
-          Sobre min
-        </Link>
+        </Link>        
       </Nav>
     </ContainerHeader>
   )

@@ -1,34 +1,78 @@
-import { useState } from 'react';
+import React, { useState } from 'react';
 
-interface Props {
-  onSubmit: (values: any) => void;
-}
 
-const Form: React.FC<Props> = (onSubmit) => {
-  const [name, setName] = useState('');
-  const [email, setEmail] = useState('');
-  const [message, setMessage] = useState('');
+type FormValues = {
+  name: string;
+  email: string;
+  subject: string;
+  description: string;
+};
+
+const Form: React.FC = (): JSX.Element => {
+  const [formValues, setFormValues] = useState<FormValues>({
+    name: '',
+    email: '',
+    subject: '',
+    description: '',
+  });
+
+  const handleChange = (event: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
+    const { name, value } = event.target;
+    setFormValues({ ...formValues, [name]: value });
+  };
 
   const handleSubmit = (event: React.FormEvent<HTMLFormElement>) => {
     event.preventDefault();
-    onSubmit({ name, email, message });
+    console.log(formValues); 
+    // Aqui você pode fazer algo com os valores do formulário, como enviar para um servidor ou armazenar localmente.
   };
 
   return (
     <form onSubmit={handleSubmit}>
-      <div>
-        <label htmlFor="name">Name:</label>
-        <input type="text" id="name" value={name} onChange={(event) => setName(event.target.value)} />
-      </div>
-      <div>
-        <label htmlFor="email">Email:</label>
-        <input type="email" id="email" value={email} onChange={(event) => setEmail(event.target.value)} />
-      </div>
-      <div>
-        <label htmlFor="message">Message:</label>
-        <textarea id="message" value={message} onChange={(event) => setMessage(event.target.value)} />
-      </div>
-      <button type="submit">Enviar</button>
+      <label>
+        Nome:
+        <input
+          type="text"
+          name="name"
+          value={formValues.name}
+          onChange={handleChange}
+        />
+      </label>
+      <br />
+      <label>
+        Email:
+        <input
+          type="email"
+          name="email"
+          value={formValues.email}
+          onChange={handleChange}
+        />
+      </label>
+      <br />
+      <label>
+        Assunto:
+        <input
+          type="text"
+          name="subject"
+          value={formValues.subject}
+          onChange={handleChange}
+        />
+      </label>
+      <br />
+      <label>
+        Descrição:
+        <textarea
+          name="description"
+          value={formValues.description}
+          onChange={handleChange}
+        />
+      </label>
+      <br />
+      <button
+        type="submit"
+      >
+        Enviar
+      </button>
     </form>
   );
 };

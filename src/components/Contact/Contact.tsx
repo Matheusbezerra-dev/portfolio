@@ -1,28 +1,28 @@
-import React, { useState } from 'react';
-import Form from '../Form/Form';
+import Form from '../../components/Form/Form';
+import map from '../../images/2.png';
 
-const Contact: React.FC = () => {
-  const [emailSent, setEmailSent] = useState(false);
+import { ConatinerTechSkill } from '../My Skills/MySkillStyle';
+import {
+  ContainerGrid,
+  ContainerTitle,
+  Titleh2,
+} from './ContactStyle';
 
-  const handleSubmit = async (values: any) => {
-    const response = await fetch('http://localhost:3000/send', {
-      method: 'POST',
-      headers: {
-        'Content-Type': 'application/json',
-      },
-      body: JSON.stringify(values),
-    });
-    setEmailSent(true);
-  };
-
+const Contact: React.FC = (): JSX.Element => {
   return (
-    <div>
-      {emailSent ? (
-        <p>Email sent!</p>
-      ) : (
-        <Form onSubmit={handleSubmit} />
-      )}
-    </div>
+    <ContainerGrid>
+        <ContainerTitle>          
+          <Titleh2>Contate-me</Titleh2>          
+        </ContainerTitle>
+        <div>         
+          <p>
+            Estou busca de uma oportunidade no mercado tech – especialmente projetos ambiciosos ou grandes. No entanto, se você tiver outra solicitação ou pergunta, não hesite em usar o formulário.
+          </p>          
+        </div>
+        <div>        
+          <Form />          
+        </div>
+    </ContainerGrid>
   );
 };
 
