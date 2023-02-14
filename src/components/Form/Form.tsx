@@ -1,10 +1,10 @@
-import React, { useState } from 'react';
+import { useState } from 'react';
 
 interface Props {
   onSubmit: (values: any) => void;
 }
 
-const Form: React.FC<Props> = ({ onSubmit }) => {
+const Form: React.FC<Props> = (onSubmit) => {
   const [name, setName] = useState('');
   const [email, setEmail] = useState('');
   const [message, setMessage] = useState('');
@@ -28,7 +28,7 @@ const Form: React.FC<Props> = ({ onSubmit }) => {
         <label htmlFor="message">Message:</label>
         <textarea id="message" value={message} onChange={(event) => setMessage(event.target.value)} />
       </div>
-      <button type="submit">Send</button>
+      <button type="submit">Enviar</button>
     </form>
   );
 };
