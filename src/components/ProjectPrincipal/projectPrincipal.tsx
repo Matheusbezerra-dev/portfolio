@@ -1,18 +1,31 @@
-interface CarouselProps {
-  name: string;
-  repositories: string;
-  deploy: string;
-  photo1: string;
-  photo2: string;
-  photo3: string;
-}
+// import { Link } from "react-router-dom";
+import projectFour from "../../service/projectFour";
+import ProjectFour from "../ProjectFour/ProjectFour";
+import {
+  ContainerProjectPrincipal,
+  ContainerSlider,
+  LinkRepositorie,
+} from './ProjectPricipalStyle'
 
-const projectPrincipal:  React.FC<CarouselProps> = ({  }) => {
+const ProjectPrincipal: React.FC = () => {
    return (
-    <div>
-      principal
-    </div>
+    <ContainerProjectPrincipal>
+      <h2>Projetos</h2>
+      <ContainerSlider>
+        {projectFour.map((obj) => <ProjectFour key={obj.name} project={{
+          name: obj.name,
+          repositories: obj.repositories,
+          deploy: obj.deploy,
+          photo1: obj.photo1,
+          photo2: obj.photo2,
+          photo3: obj.photo3,
+        }} />)}
+      </ContainerSlider>
+      <LinkRepositorie to='/projects'>
+        Click aqui para ver mais projetos
+      </LinkRepositorie>
+    </ContainerProjectPrincipal>
   )
 }
 
-export default projectPrincipal
+export default ProjectPrincipal;

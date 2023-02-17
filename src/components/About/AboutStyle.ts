@@ -6,8 +6,11 @@ export const ContainerAbout = styled.div`
   flex-direction: column;
   text-align: center;
   align-items: center;
-  height: 55vh;
+  /* height: 55vh; */
+  margin-top: 5rem;
+  margin-bottom: 5rem;
   max-width: 900px;
+  padding: 2rem;
 `;
 
 export const TitleAbout = styled.h2`

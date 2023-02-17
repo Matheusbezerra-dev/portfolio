@@ -7,7 +7,7 @@ export const ContainerAboutMe = styled.div`
   width: 100%;
   height: 100vh;
   justify-content: space-around;
-  /* margin: 6rem; */
+  /* margin-bottom: 6rem;  */
   flex-wrap: wrap-reverse;
   align-items: center;
 `;
@@ -16,6 +16,9 @@ export const ContainerH1 = styled.div`
   display: flex;
   flex-direction: column;
   line-height: 2.2rem;
+  @media (max-width: 420px) {
+    align-items: center;
+  }
 `;
 
 export const Img = styled.img`
@@ -25,6 +28,9 @@ export const Img = styled.img`
 
 export const ContainerP = styled.div`
   margin-bottom: 0.8rem;
+  @media (max-width: 420px) {
+    text-align: center;
+  }
 `;
 
 export const ContainerButton = styled.a`
@@ -32,6 +38,9 @@ export const ContainerButton = styled.a`
   justify-content: space-between;
   flex-wrap: wrap;
   padding: 1rem;
+  @media (max-width: 450px) {
+    justify-content: center;
+  }
 `;
 
 export const ButtonCV = styled.a`
@@ -50,6 +59,10 @@ export const ButtonCV = styled.a`
     transition: 400ms;
     background-color: #4c007d;
   }
+  @media (max-width: 450px) {
+    width: 20rem;
+    margin-top: 1.5rem;
+  }
 `;
 
 export const ButtonContact = styled.a`
@@ -66,4 +79,8 @@ export const ButtonContact = styled.a`
     transition: 400ms;
     background-color: #4c007d;
   };
+  @media (max-width: 450px) {
+    width: 20rem;
+    margin-top: 1.5rem;
+  }
 `;
