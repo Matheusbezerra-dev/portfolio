@@ -1,13 +1,14 @@
 import styled from "styled-components";
 
-export const ContainerMySkill = styled.main`
+export const ContainerMySkill = styled.div`
   display: flex;
   flex-direction: column;
+  margin-top: 4rem;
+  align-items: center;
 `;
 
 export const ContainerSkill = styled.section`
-  display: grid;
-  
+  display: grid;  
 `;
 
 export const ContainerSkillBar = styled.div`

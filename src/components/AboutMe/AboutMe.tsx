@@ -1,7 +1,16 @@
-import React from 'react';
 import cv from '../../service/MatheusBezerradosSantos.pdf'
+import ft from '../../images/fotoDePerfil.jpg';
+import {
+  ContainerAboutMe,
+  Img,
+  ContainerH1,
+  ContainerP,
+  ButtonCV,
+  ButtonContact,
+  ContainerButton,  
+} from './AboutMeStyle';
 
-const AboutMe = () => {
+const AboutMe: React.FC = (): JSX.Element => {
   const handleClick = () => {
     const link = document.createElement('a');
     link.href = cv;
@@ -10,17 +19,35 @@ const AboutMe = () => {
     link.click();
   };
   return (
-    <section>
+    <ContainerAboutMe>
       <div>
-        <h1>Olá, sou <strong>Matheus Bezerra</strong></h1>
-        <h3>desenvolvedor web</h3>
+        <ContainerH1>
+          <h1>Olá,</h1>
+          <h1>sou <strong>Matheus Bezerra</strong></h1>
+          <h3>Desenvolvedor Web</h3>
+        </ContainerH1>
+        <ContainerP>
+          <p>Apaixonado por tecnologia, desenvolvimento e apreendizado.</p>
+        </ContainerP>
+        <ContainerButton>
+          <ButtonCV
+            onClick={handleClick}
+          >
+            Download CV
+          </ButtonCV>
+          <ButtonContact
+            href='mailto:mabezerra2@gmail.com'
+            target='_blank'
+          >
+            Entrar em contato
+          </ButtonContact>
+        </ContainerButton>        
       </div>
-      <div><p>Apaixonado por tecnologia, desenvolvimento e apreendizado.</p></div>
       <div>
-        <button onClick={handleClick}>Baixar PDF</button>      
+        <Img src={ ft } alt="foto de perfil" />
       </div>
-
-    </section>
+      
+    </ContainerAboutMe>
   )
 }
 
