@@ -9,7 +9,9 @@ interface CarouselProps {
 
 const projectPrincipal:  React.FC<CarouselProps> = ({  }) => {
    return (
-    
+    <div>
+      principal
+    </div>
   )
 }
 
