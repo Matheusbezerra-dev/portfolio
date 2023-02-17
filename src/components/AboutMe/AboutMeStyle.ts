@@ -54,6 +54,7 @@ export const ButtonCV = styled.a`
   border: 1px solid black;
   border-radius: 1rem;
   color: #fff;
+  cursor: pointer;
   background-color: #8257E6;
   :hover{
     transition: 800ms;
