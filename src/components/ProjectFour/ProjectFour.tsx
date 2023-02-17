@@ -44,8 +44,8 @@ const ProjectFour: React.FC<CarouselProps> = ({ project }): JSX.Element => {
         </div>      
       </Slider>
       <ContainerButton>
-        <ButtonDeploy href={project.deploy}>Deploy</ButtonDeploy>
-        <ButtonRepositories href={project.repositories}>Repositório</ButtonRepositories>
+        <ButtonDeploy href={project.deploy} target='_blank'>Deploy</ButtonDeploy>
+        <ButtonRepositories href={project.repositories} target='_blank'>Repositório</ButtonRepositories>
       </ContainerButton>
     </ContainerSlider>
   )

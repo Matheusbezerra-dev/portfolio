@@ -56,7 +56,7 @@ export const ButtonCV = styled.a`
   color: #fff;
   background-color: #8257E6;
   :hover{
-    transition: 400ms;
+    transition: 800ms;
     background-color: #4c007d;
   }
   @media (max-width: 450px) {
@@ -76,7 +76,7 @@ export const ButtonContact = styled.a`
   border-radius: 1rem;
   :hover {
     color: #fff;
-    transition: 400ms;
+    transition: 800ms;
     background-color: #4c007d;
   };
   @media (max-width: 450px) {

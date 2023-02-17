@@ -3,15 +3,17 @@ import styled from "styled-components";
 export const ContainerHeader = styled.header`
   display: flex;
   justify-content: space-between;
-  height: 3.5rem;
+  align-items: center;
+  height: 5rem;
+  background-color: #4b1c71;
   border-bottom: 2px solid #8257E6;
   a {
-    color: black;
+    color: #fff0ff;
     text-decoration: none;
     :hover {
       transition: 800ms;
-      color: #4c007d;
-      border-bottom: 1px solid #4c007d; 
+      color: #aaa;      
+      border-bottom: 1px solid #aaa; 
     }
   }
 `;
