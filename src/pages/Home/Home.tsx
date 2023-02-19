@@ -20,7 +20,7 @@ const Home: React.FC = (): JSX.Element => {
       <ProjectPrincipal />
       <Contact />      
     </ContainerMain>
-  )
-}
+  );
+};
 
 export default Home;

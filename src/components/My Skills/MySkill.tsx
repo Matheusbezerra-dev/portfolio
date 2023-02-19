@@ -1,6 +1,4 @@
-import React from 'react'
-import { Link } from 'react-router-dom';
-import SkillBar from '../../components/SkillBar/skillBar';
+import React from 'react';
 import techList from '../../service/techList';
 import TechList from '../TechList/TechList';
 import {
