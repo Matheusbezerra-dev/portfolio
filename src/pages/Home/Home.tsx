@@ -11,7 +11,7 @@ const ContainerMain = styled.main`
   align-items: center;
 `;
 
-const Home = (): JSX.Element => {
+const Home: React.FC = (): JSX.Element => {
   return (
     <ContainerMain>      
       <AboutMe />        

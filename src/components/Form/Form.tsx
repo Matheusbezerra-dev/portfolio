@@ -1,5 +1,11 @@
 import React, { useState } from 'react';
+import { TextField } from '@mui/material';
+import styled from 'styled-components';
 
+const ContainerForm = styled.form`
+  display: flex;
+  flex-wrap: wrap;
+`;
 
 type FormValues = {
   name: string;
@@ -23,57 +29,55 @@ const Form: React.FC = (): JSX.Element => {
 
   const handleSubmit = (event: React.FormEvent<HTMLFormElement>) => {
     event.preventDefault();
-    console.log(formValues); 
+    console.log(formValues);
     // Aqui você pode fazer algo com os valores do formulário, como enviar para um servidor ou armazenar localmente.
   };
 
   return (
-    <form onSubmit={handleSubmit}>
-      <label>
-        Nome:
-        <input
-          type="text"
-          name="name"
-          value={formValues.name}
-          onChange={handleChange}
-        />
-      </label>
-      <br />
-      <label>
-        Email:
-        <input
-          type="email"
-          name="email"
-          value={formValues.email}
-          onChange={handleChange}
-        />
-      </label>
-      <br />
-      <label>
-        Assunto:
-        <input
-          type="text"
-          name="subject"
-          value={formValues.subject}
-          onChange={handleChange}
-        />
-      </label>
-      <br />
-      <label>
-        Descrição:
-        <textarea
-          name="description"
-          value={formValues.description}
-          onChange={handleChange}
-        />
-      </label>
-      <br />
+    <ContainerForm onSubmit={handleSubmit}>
+      <TextField
+        type="text"
+        fullWidth
+        name="name"
+        label="Nome"
+        variant="outlined"
+        value={formValues.name}
+        onChange={handleChange}
+      />
+      <TextField
+        label="Email"
+        fullWidth
+        variant="outlined"
+        type="email"
+        name="email"
+        value={formValues.email}
+        onChange={handleChange}
+      />
+      <TextField
+        label="Assunto"
+        variant="outlined"
+        fullWidth
+        type="text"
+        name="subject"
+        value={formValues.subject}
+        onChange={handleChange}
+      />
+      <TextField
+        label="Descrição"
+        multiline
+        fullWidth
+        rows={4}
+        // defaultValue="Default Value"
+        name="description"
+        value={formValues.description}
+        onChange={handleChange}
+      />
       <button
         type="submit"
       >
         Enviar
       </button>
-    </form>
+    </ContainerForm >
   );
 };
 

@@ -8,7 +8,7 @@ const ContainerFooter = styled.footer`
   height: 2.5rem;
 `;
 
-const Footer = (): JSX.Element => {
+const Footer: React.FC = (): JSX.Element => {
   return (
     <ContainerFooter>
       Criado por Matheus Bezerra

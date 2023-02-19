@@ -1,4 +1,3 @@
-import React from 'react';
 import { Link } from 'react-router-dom';
 import {
   ContainerHeader,
@@ -6,7 +5,7 @@ import {
   Div,
 } from './HeaderStyle';
 
-const Header = (): JSX.Element => {
+const Header: React.FC = (): JSX.Element => {
   return (
     <ContainerHeader>
       <Div>

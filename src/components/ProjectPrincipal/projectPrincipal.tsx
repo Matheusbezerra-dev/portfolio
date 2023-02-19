@@ -7,7 +7,7 @@ import {
   LinkRepositorie,
 } from './ProjectPricipalStyle'
 
-const ProjectPrincipal: React.FC = () => {
+const ProjectPrincipal: React.FC = (): JSX.Element => {
    return (
     <ContainerProjectPrincipal>
       <h2>Projetos</h2>
