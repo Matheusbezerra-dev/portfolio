@@ -1,7 +1,4 @@
 import Form from '../../components/Form/Form';
-
-
-
 import {
   ContainerContact,  
   Titleh2,
@@ -22,4 +19,4 @@ const Contact: React.FC = (): JSX.Element => {
   );
 };
 
-export default Contact;
+export default Contact; 

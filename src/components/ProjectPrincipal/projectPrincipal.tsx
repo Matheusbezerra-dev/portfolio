@@ -5,7 +5,7 @@ import {
   ContainerProjectPrincipal,
   ContainerSlider,
   LinkRepositorie,
-} from './ProjectPricipalStyle'
+} from './ProjectPricipalStyle';
 
 const ProjectPrincipal: React.FC = (): JSX.Element => {
    return (
