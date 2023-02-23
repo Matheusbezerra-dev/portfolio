@@ -24,6 +24,9 @@ export const Nav = styled.nav`
   display: flex;
   justify-content: space-around;
   padding: 1rem;
+  @media (max-width: 750px) {
+    display: none;
+  }
 `;
 
 export const Div = styled.div`  
