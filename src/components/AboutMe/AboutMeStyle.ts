@@ -51,7 +51,8 @@ export const ButtonCV = styled.a`
   padding: 0.5rem;
   width: 8.5rem;
   height: 2.5rem;
-  border: 1px solid black;
+  border: 1px solid #8257E6;
+  font-weight: bold;
   border-radius: 1rem;
   color: #fff;
   cursor: pointer;
@@ -70,8 +71,10 @@ export const ButtonContact = styled.a`
   display: flex;
   justify-content: center;
   align-items: center;
-  border: 1px solid black;
+  border: 1px solid #4c007d;
   text-decoration: none;
+  font-weight: bold;
+  color: #4c007d;
   width: 11rem;
   height: 2.5rem;
   border-radius: 1rem;

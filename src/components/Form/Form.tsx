@@ -5,6 +5,35 @@ import styled from 'styled-components';
 const ContainerForm = styled.form`
   display: flex;
   flex-wrap: wrap;
+  justify-content: center;
+  /* flex-direction: column; */
+  gap: 0.7rem;
+`;
+
+const ContainerInput = styled.div`
+  display: flex;
+  width: 100%;
+  gap: 5px;
+  @media (max-width: 500px) {
+    flex-wrap: wrap;
+    gap: 0.7rem;
+  }
+`;
+
+const Button = styled.button`
+  width: 11rem;
+  height: 2.5rem;
+  border-radius: 1rem;
+  border: 1px solid #4c007d;
+  color: #fff;
+  font-weight: bold;
+  background-color: #4c007d;
+  :hover{
+    transition: 800ms;
+    background: none;
+    color: #4c007d;
+    font-weight: bold;
+  }
 `;
 
 type FormValues = {
@@ -35,7 +64,8 @@ const Form: React.FC = (): JSX.Element => {
 
   return (
     <ContainerForm onSubmit={handleSubmit}>
-      <TextField
+      <ContainerInput>
+        <TextField
         type="text"
         fullWidth
         name="name"
@@ -53,6 +83,8 @@ const Form: React.FC = (): JSX.Element => {
         value={formValues.email}
         onChange={handleChange}
       />
+      </ContainerInput>
+      
       <TextField
         label="Assunto"
         variant="outlined"
@@ -72,11 +104,11 @@ const Form: React.FC = (): JSX.Element => {
         value={formValues.description}
         onChange={handleChange}
       />
-      <button
+      <Button
         type="submit"
       >
         Enviar
-      </button>
+      </Button>
     </ContainerForm >
   );
 };
