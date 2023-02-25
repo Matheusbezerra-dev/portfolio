@@ -46,8 +46,7 @@ export const ContainerButton = styled.a`
 export const ButtonCV = styled.a`
   display: flex;
   justify-content: center;
-  align-items: center;
-  border: 1px solid black;
+  align-items: center;  
   padding: 0.5rem;
   width: 8.5rem;
   height: 2.5rem;

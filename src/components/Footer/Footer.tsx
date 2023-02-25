@@ -6,6 +6,7 @@ const ContainerFooter = styled.footer`
   align-items: center;
   justify-content: center;
   height: 2.5rem;
+  width: 100%;
 `;
 
 const Footer: React.FC = (): JSX.Element => {

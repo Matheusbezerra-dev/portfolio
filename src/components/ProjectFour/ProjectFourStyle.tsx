@@ -7,8 +7,14 @@ export const ContainerSlider = styled.div`
   width: 25rem; 
   height: 20rem;
   padding: 1rem;
+  margin-top: 1rem;
+  margin-bottom: 1rem;
   h4 {
     margin-bottom: 1rem;
+  }
+  @media (max-width: 420px){
+    width: 21.8rem;
+    height: 18rem;
   }
 `;
 
@@ -33,13 +39,30 @@ export const Img = styled.img`
 `;
 
 export const ButtonDeploy = styled.a`
-  background-color: purple;
+  border-radius: 1rem;
+  border: 1px solid #4c007d;
   color: #fff;
+  font-weight: bold;
+  background-color: #4c007d;
   text-decoration: none;
+  :hover{
+    transition: 800ms;
+    background: none;
+    color: #4c007d;
+  }
 `;
 
-export const ButtonRepositories = styled.a`
-  background-color: #8257E6;
-  color: #fff;
+export const ButtonRepositories = styled.a` 
+  border: 1px solid black; 
   text-decoration: none;
+  border: 1px solid #8257E6;
+  font-weight: bold;
+  border-radius: 1rem;
+  color: #fff;
+  cursor: pointer;
+  background-color: #8257E6;
+  :hover{
+    transition: 800ms;
+    background-color: #4c007d;
+  }
 `;
