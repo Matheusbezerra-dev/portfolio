@@ -7,7 +7,6 @@ export const ContainerAboutMe = styled.div`
   width: 100%;
   height: 100vh;
   justify-content: space-around;
-  /* margin-bottom: 6rem;  */
   flex-wrap: wrap-reverse;
   align-items: center;
 `;

@@ -11,7 +11,7 @@ const MySkill: React.FC = (): JSX.Element => {
   return (
     <ContainerMySkill>
       <div>
-        <h2>Skill</h2>
+        <h2 id='my-skills'>Skill</h2>
       </div>      
       <ConatinerTechSkill>
         {techList.map((tech) => <TechList key={tech.tech} techList={{ tech: tech.tech, image: tech.image }} />)}; 

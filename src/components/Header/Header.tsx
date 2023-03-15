@@ -17,18 +17,18 @@ const Header: React.FC = (): JSX.Element => {
         <Link to='/'>
           Home
         </Link>
-        <Link to='/about'>
+        <a href='#about'>
           Sobre min
-        </Link>
-        <Link to='/my-skills'>
+        </a>
+        <a href='#my-skills'>
           Minha Habilidade
-        </Link>
-        <Link to='/projects'>
+        </a>
+        <a href='#projects'>
           Projetos
-        </Link>
-        <Link to='/contact'>
+        </a>
+        <a href='#contact'>
           Contate-me
-        </Link>        
+        </a>        
       </Nav>
     </ContainerHeader>
   )

@@ -9,7 +9,7 @@ import {
 const ProjectPrincipal: React.FC = (): JSX.Element => {
    return (
     <ContainerProjectPrincipal>
-      <h2>Projetos</h2>
+      <h2 id='projects'>Projetos</h2>
       <ContainerSlider>
         {projectFour.map((obj) => <ProjectFour key={obj.name} project={{
           name: obj.name,
@@ -21,7 +21,7 @@ const ProjectPrincipal: React.FC = (): JSX.Element => {
         }} />)}
       </ContainerSlider>
       <LinkRepositorie to='/projects'>
-        Click aqui para ver mais projetos
+        Mais Projetos
       </LinkRepositorie>
     </ContainerProjectPrincipal>
   )

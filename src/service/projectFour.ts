@@ -10,6 +10,9 @@ import app3 from '../images/img/AppPizza/3.png';
 import tw1 from '../images/img/TrybeWallet/1.png';
 import tw2 from '../images/img/TrybeWallet/2.png';
 import tw3 from '../images/img/TrybeWallet/3.png';
+import ms1 from '../images/img/mirai/Captura de tela 2023-03-14 231040.png';
+import ms2 from '../images/img/mirai/Captura de tela 2023-03-14 231051.png';
+import ms3 from '../images/img/mirai/Captura de tela 2023-03-14 231108.png';
 
 const projectFour = [
   {
@@ -43,6 +46,14 @@ const projectFour = [
     photo1: pf1,
     photo2: pf2,
     photo3: pf3,
+  },
+  {
+    name: 'Mirai Software',
+    repositories: 'https://github.com/Matheusbezerra-dev/pageFilms',
+    deploy: 'https://miraisoftware.com.br/',
+    photo1: ms1,
+    photo2: ms2,
+    photo3: ms3,
   },
 ]
 

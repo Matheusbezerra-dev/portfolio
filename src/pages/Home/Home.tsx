@@ -2,6 +2,7 @@ import styled from 'styled-components';
 import About from '../../components/About/About';
 import AboutMe from '../../components/AboutMe/AboutMe';
 import Contact from '../../components/Contact/Contact';
+import Map from '../../components/Map/Map';
 import MySkill from '../../components/My Skills/MySkill';
 import ProjectPrincipal from '../../components/ProjectPrincipal/projectPrincipal';
 
@@ -18,7 +19,8 @@ const Home: React.FC = (): JSX.Element => {
       <About />        
       <MySkill />
       <ProjectPrincipal />
-      <Contact />      
+      <Contact />
+      <Map />  
     </ContainerMain>
   );
 };

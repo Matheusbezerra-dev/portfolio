@@ -20,5 +20,20 @@ export const ContainerSlider = styled.div`
 `;
 
 export const LinkRepositorie = styled(Link)`
+   display: flex;
+  justify-content: center;
+  align-items: center;
   margin-top: 5rem;
+  border: 1px solid #4c007d;
+  text-decoration: none;
+  font-weight: bold;
+  color: #4c007d;
+  width: 11rem;
+  height: 2.5rem;
+  border-radius: 1rem;
+  :hover {
+    color: #fff;
+    transition: 800ms;
+    background-color: #4c007d;
+  };
 `;
